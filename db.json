@@ -9,6 +9,11 @@
       "id": "f898a599-bbb6-4682-97ea-4579268201ec",
       "task": "sleep well",
       "completed": false
+    },
+    {
+      "id": "ce6560cf-fe4b-481a-818a-0ba883bed7e4",
+      "task": "pay emi",
+      "completed": false
     }
   ]
 }

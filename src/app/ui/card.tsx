@@ -3,7 +3,7 @@
 import { ReactElement } from "react";
 import { Todo } from "../typings/card.types";
 
-const Card = ({ id, completed, task }: Todo): ReactElement => {
+const Card = ({ id, task }: Todo): ReactElement => {
   return (
     <div key={id} className="w-1/2 p-4">
       <div className="bg-white rounded-lg shadow-md p-4">
