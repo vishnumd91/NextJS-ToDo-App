@@ -1,19 +1,14 @@
 {
   "todos": [
     {
-      "id": 1,
-      "task": "Finish coding assignments",
+      "id": "13ded427-a0a6-47d6-8634-86911dbbc4e2",
+      "task": "call mom",
       "completed": false
     },
     {
-      "id": 2,
-      "task": "Buy groceries",
+      "id": "f898a599-bbb6-4682-97ea-4579268201ec",
+      "task": "sleep well",
       "completed": false
-    },
-    {
-      "id": 3,
-      "task": "Call mom",
-      "completed": true
     }
   ]
 }
