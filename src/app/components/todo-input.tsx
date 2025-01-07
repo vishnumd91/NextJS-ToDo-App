@@ -1,7 +1,7 @@
 "use client";
 import { ReactElement, useState } from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { v4 as uuidv4 } from "uuid";
+import { addToDo } from "../services/todo-list.service";
 
 export const ToDoInput = (): ReactElement => {
   const [task, setTask] = useState<string>("");
@@ -16,16 +16,7 @@ export const ToDoInput = (): ReactElement => {
   };
 
   const mutation = useMutation({
-    mutationFn: async (task: string) => {
-      const response = await fetch("http://localhost:3001/todos", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ id: uuidv4(), task, completed: false }),
-      });
-      return response.json();
-    },
+    mutationFn: (task: string) => addToDo(task),
     onMutate: () => {
       setTask("");
     },

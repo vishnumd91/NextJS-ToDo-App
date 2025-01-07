@@ -4,15 +4,13 @@ import { ReactElement } from "react";
 import { Todo } from "../typings/card.types";
 import Card from "../ui/card";
 import { useQuery } from "@tanstack/react-query";
+import { getToDos } from "../services/todo-list.service";
 
 const CardList = (): ReactElement => {
   // Fetch ToDos
   const { data: todos } = useQuery<Todo[]>({
     queryKey: ["todos"],
-    queryFn: async () => {
-      const response = await fetch("http://localhost:3001/todos");
-      return response.json() ?? [];
-    },
+    queryFn: getToDos,
   });
 
   return (
